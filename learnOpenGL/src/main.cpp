@@ -23,6 +23,15 @@ void framebuffer_size_callback(GLFWwindow* window, int width, int height) {
 	glViewport(0, 0, width, height);
 }
 
+// process keyboard input 
+void processInput(GLFWwindow* window) {
+	// if Esc key is pressed
+	if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS) {
+		// close the window
+		glfwSetWindowShouldClose(window, true);
+	}
+}
+
 int main() {
 	// Initialize GLFW
 	init();
@@ -53,12 +62,19 @@ int main() {
 
 	// While the window should not be closed
 	while (!glfwWindowShouldClose(window)) {
-		// Swap the color buffer (a large 2D buffer that contains color values
-		// for each pixel in GLFW window)
-		glfwSwapBuffers(window);
+		// Process user input
+		processInput(window);
+
+		// Render things here
+		glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
+		glClear(GL_COLOR_BUFFER_BIT);
 
 		// Listen to input events (eg. keyboard input or mouse events)
 		glfwPollEvents();
+
+		// Swap the color buffer (a large 2D buffer that contains color values
+		// for each pixel in GLFW window)
+		glfwSwapBuffers(window);
 	}
 
 	// When we break out of the render loop
