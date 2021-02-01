@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "learnOpenGL", "learnOpenGL\learnOpenGL.vcxproj", "{53864C18-3A78-4954-945D-0B275AC8F4FB}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GPAssignment", "GPAssignment\GPAssignment.vcxproj", "{53864C18-3A78-4954-945D-0B275AC8F4FB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
