@@ -41,6 +41,18 @@ void processInput(GLFWwindow* window) {
 		// close the window
 		glfwSetWindowShouldClose(window, true);
 	}
+
+	// if Q key is pressed
+	if (glfwGetKey(window, GLFW_KEY_Q) == GLFW_PRESS) {
+		// Change the weopen
+		std::cout << "Toggle Weopen" << std::endl;
+	}
+
+	// if Spacebar key is pressed
+	if (glfwGetKey(window, GLFW_KEY_LEFT_SHIFT) == GLFW_PRESS) {
+		// Attack with the weopen equipped
+		std::cout << "Attack" << std::endl;
+	}
 }
 
 int main(void) {
@@ -48,7 +60,7 @@ int main(void) {
 	init();
 
 	// Create a GLFW Window object
-	GLFWwindow* window = glfwCreateWindow(800, 600, "Learn OpenGL", NULL, NULL);
+	GLFWwindow* window = glfwCreateWindow(800, 600, "Ironman", NULL, NULL);
 	if (window == NULL) {
 		std::cout << "Failed to create GLFW Window" << std::endl;
 		glfwTerminate();
