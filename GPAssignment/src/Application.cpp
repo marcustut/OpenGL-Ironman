@@ -41,6 +41,36 @@ void processInput(GLFWwindow* window) {
 		// close the window
 		glfwSetWindowShouldClose(window, true);
 	}
+
+	if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS) {
+		// fly up
+		std::cout << "Fly Up" << std::endl;
+
+	}
+
+	if (glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS) {
+		// fly left
+		std::cout << "Fly Left" << std::endl;
+
+	}
+
+	if (glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS) {
+		// fly down
+		std::cout << "Fly Down" << std::endl;
+
+	}
+
+	if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS) {
+		// fly right
+		std::cout << "Fly Right" << std::endl;
+
+	}
+
+	if (glfwGetKey(window, GLFW_KEY_LEFT_SHIFT) == GLFW_PRESS) {
+		// accelerate
+		std::cout << "Accelerate" << std::endl;
+
+	}
 }
 
 int main(void) {
